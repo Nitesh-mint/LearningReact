@@ -3,6 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ShowList from './test.jsx'
+import SimpleForm from './simpleForm.jsx'
+import Counter from './counter.jsx'
+import ToggleSwitch from './toggleSwitch'
+import FetchData from './fetchData.jsx'
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -31,7 +35,11 @@ function App() {
 	]
 	return (
 		<>
-			<ShowList people={people} />
+		{/* <ShowList people={people} /> */}
+		{/*	<SimpleForm /> */}
+		{/* <Counter /> */}
+		{/* <ToggleSwitch /> */}
+		<FetchData />
 		</>
 	)
 }
