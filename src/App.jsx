@@ -7,6 +7,9 @@ import SimpleForm from './simpleForm.jsx'
 import Counter from './counter.jsx'
 import ToggleSwitch from './toggleSwitch'
 import FetchData from './fetchData.jsx'
+import DisplayArray from './display_array.jsx'
+import LoveArray from './loveArray.jsx'
+import TextCounter from './textCounter.jsx'
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -39,7 +42,10 @@ function App() {
 		{/*	<SimpleForm /> */}
 		{/* <Counter /> */}
 		{/* <ToggleSwitch /> */}
-		<FetchData />
+		{/* <FetchData /> */}
+		{/* <DisplayArray/> */}
+		{/* <LoveArray /> */}
+		<TextCounter />
 		</>
 	)
 }
