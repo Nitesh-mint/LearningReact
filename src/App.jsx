@@ -10,6 +10,7 @@ import FetchData from './fetchData.jsx'
 import DisplayArray from './display_array.jsx'
 import LoveArray from './loveArray.jsx'
 import TextCounter from './textCounter.jsx'
+import HandleForm from './handleform.jsx'
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -45,7 +46,8 @@ function App() {
 		{/* <FetchData /> */}
 		{/* <DisplayArray/> */}
 		{/* <LoveArray /> */}
-		<TextCounter />
+		{/* <TextCounter /> */}
+		<HandleForm />
 		</>
 	)
 }
