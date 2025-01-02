@@ -1,0 +1,50 @@
+import { useState } from 'react';
+
+export default function Todo() {
+	const mytask = {
+		id: 1,
+		title: "GET SOME LIFE"
+	};
+
+	const [task, setTask] = useState([mytask]);
+	const [newTask, setNewTask] = useState({
+		title: ''
+	}); 
+
+	const [edit, setEdit] = useState(false);  
+
+	function duplicateMyTask() {
+		setTask((prevData) => [
+			...prevData, // Keep all previous tasks
+			{ ...mytask, id: prevData.length + 1 } // Add a new task with a unique ID
+		]);
+	}
+	function handleAddNewTask(e)
+		e.preventDefault();
+		setTask((prevTask) => [
+			...prevTask,
+			{ id: prevTask.length + 1 ,title: e.target.title.value }
+		])
+	}
+	function handleEditTask(e){
+		
+	}
+	return (
+		<>
+		<h1>A simple todo in react</h1>
+		<button onClick={duplicateMyTask}>Add same task</button>
+
+		<button>Add new task </button>
+		{task.map((t) => (
+			<p hidden = {!edit} key={t.id}>{t.title}<button onClick = {() => setTask((prevTasks) => prevTasks.filter((task) => task.id !== t.id))
+			}>Delete</button><button >Edit</button></p>
+		))}
+
+		<form hidden = {false} onSubmit = {handleAddNewTask}>
+		<label id="title">Title </label>
+		<input name="title" type="text" value={newTask.title} onChange = { (e) => setNewTask({title: e.target.value})}/>
+		<button type="submit" >Add</button>
+		</form>
+		</>
+	);
+}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+	import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,6 +11,7 @@ import DisplayArray from './display_array.jsx'
 import LoveArray from './loveArray.jsx'
 import TextCounter from './textCounter.jsx'
 import HandleForm from './handleform.jsx'
+import Todo from './todo.jsx';
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -47,7 +48,8 @@ function App() {
 		{/* <DisplayArray/> */}
 		{/* <LoveArray /> */}
 		{/* <TextCounter /> */}
-		<HandleForm />
+		{/* <HandleForm /> */}
+		<Todo />
 		</>
 	)
 }

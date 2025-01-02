@@ -12,6 +12,7 @@ fetch('https://dummyjson.com/products')
 		return response.json();
 	})
 	.then(data => {
+		
 		data.products.forEach((product) => {
 			console.log(product.title);
 		})
